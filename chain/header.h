@@ -9,10 +9,25 @@
 using namespace std;
 
 class Transazione {
+private:
+	char transCode[32];
+
 
 };
 
-class Blocco {
+class DatiTransazione : public Transazione
+{
+	/*
+	-data transazione
+	-importo transazione
+	-codice utente
+	-codice carta
+	-codice univoco transazione
+	*/
+
+};
+
+class Blocco : public Chain {
 private:
 	int idChain;
 	int idBlocco;
@@ -26,7 +41,6 @@ public:
 	void setIdBlocco(int id);
 	void addCounter();
 	void addTransaction(int trans, int i);
-	void addBlock(Blocco B);
 };
 
 
