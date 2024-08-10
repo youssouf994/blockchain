@@ -9,25 +9,39 @@
 using namespace std;
 
 class Transazione {
-private:
-	char transCode[32];
+	private:
+		string transCode;
+		
 
+	public:
+		Transazione();
+		Transazione(string code);
+		string getCode();
+		void setCode();
 
 };
 
-class DatiTransazione : public Transazione
+class DatiTransazione
 {
-	/*
-	-data transazione
-	-importo transazione
-	-codice utente
-	-codice carta
-	-codice univoco transazione
-	*/
+	private:
+		string data;
+		string ora;
+		double importo;
+		string codUte;
+		string codCarta;
+		string codiceUnivocoTransazione;
+
+protected:
+
+	
+
+public:
+	DatiTransazione();
+	void calcolaData();
 
 };
 
-class Blocco : public Chain {
+class Blocco {
 private:
 	int idChain;
 	int idBlocco;
@@ -61,5 +75,9 @@ public:
 	string toString();
 	void setBlocco(Blocco b);
 };
+
+
+
+
 
 #endif //HEADER_H

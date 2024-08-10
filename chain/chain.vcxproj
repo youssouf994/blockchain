@@ -127,7 +127,16 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="blocco.cpp" />
     <ClCompile Include="chain.cpp" />
+    <ClCompile Include="datiTransazione.cpp" />
+    <ClCompile Include="gestFile.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="transazione.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="gestioneFile.h" />
+    <ClInclude Include="header.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
