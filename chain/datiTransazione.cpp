@@ -11,6 +11,16 @@ DatiTransazione::DatiTransazione()
 
 }
 
+DatiTransazione::DatiTransazione(double importo, string codUte, string codCarta)
+{
+	this->importo = importo;
+	this->codUte = codUte;
+	this->codCarta = codCarta;
+
+	calcolaData();
+	generaCodUnivoco();
+}
+
 void DatiTransazione::calcolaData()
 {
 	char buffer[80];
@@ -25,32 +35,46 @@ void DatiTransazione::calcolaData()
 
 	x = 0;
 	i = 0;
-	while (buffer[i] != '_' && buffer[i] != '\0')
+	while (i!=10) 
 	{
 		this->data += buffer[i];
 		
 		i++;
 
-		if (buffer[i] == '_')
-		{
-			i++;
-		}
+		
 	}
 
-	while(buffer[i]!='_' && buffer[i] != '\0')
+	while(buffer[i]!='\0')
 	{
 		this->ora += buffer[i];
 		
 		i++;
 
-		if (buffer[i] == '_')
-		{
-			break;
-		}
 	}
-
-	cout << data<<endl;
-	cout<<ora;
 
 
 }
+
+
+
+
+
+void DatiTransazione::generaCodUnivoco()
+{
+	this->codiceUnivocoTransazione =
+		this->data +
+		this->ora +
+		to_string(this->importo) +
+		this->codUte +
+		this->codCarta +
+		/*this-> +codMacchina*/
+		"!";
+}
+
+string DatiTransazione::getCodiceUnivoco()
+{
+	return this->codiceUnivocoTransazione;
+}
+
+
+

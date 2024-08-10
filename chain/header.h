@@ -23,22 +23,23 @@ class Transazione {
 
 class DatiTransazione
 {
-	private:
-		string data;
-		string ora;
-		double importo;
-		string codUte;
-		string codCarta;
-		string codiceUnivocoTransazione;
+private:
+	string data;
+	string ora;
+	double importo;
+	string codUte;
+	string codCarta;
+	string codiceUnivocoTransazione;
 
 protected:
+	void calcolaData();
+	void generaCodUnivoco();
 
-	
 
 public:
 	DatiTransazione();
-	void calcolaData();
-
+	DatiTransazione(double importo, string codUte, string codCarta);
+	string getCodiceUnivoco();
 };
 
 class Blocco {

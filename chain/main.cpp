@@ -7,11 +7,21 @@ using namespace std;
 
 int main()
 {
-	Blocco b;
-	Chain c;
-	DatiTransazione dt;
+	string codCarta = "00000001";
+	string codUte = "00000001";
+	double importo = 157.26;
+	string appoggio;
 
-	dt.calcolaData();
+	DatiTransazione dt(importo, codUte, codCarta);
+	Blocco block;
+	Chain Chain;
+	
+	appoggio = dt.getCodiceUnivoco();
+	cout << appoggio;
+	
+	Transazione transact(appoggio);
+
+
 
 	return 0;
 }
