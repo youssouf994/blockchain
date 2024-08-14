@@ -15,6 +15,7 @@ int main()
 	DatiTransazione dt(importo, codUte, codCarta);
 	Blocco block;
 	Chain Chain;
+	GestFile g;
 	
 	appoggio = dt.getCodiceUnivoco();
 	cout << appoggio;

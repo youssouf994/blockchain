@@ -79,6 +79,24 @@ public:
 
 
 
+class GestFile
+{
+	private:
+		string appoggio;
+		bool check;
 
+	protected:
+		bool getCheckCostr();
+		void codifica();
+		void decodifica();
+
+	public:
+		GestFile();
+
+		void leggiBlocchi();
+		void leggiChain();
+		void scriviBlocchi();
+		void scriviChain();
+};
 
 #endif //HEADER_H
