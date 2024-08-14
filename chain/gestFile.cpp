@@ -9,10 +9,10 @@ using namespace std;
 GestFile::GestFile()
 {
 
-	ofstream scriviBlo("blocchi.txt", ios::out || ios::app);
+	ofstream scriviBlo("blocchi.txt", ios::out | ios::app);
 	ifstream leggiblo("blocchi.txt", ios::in);
 
-	ofstream scriviCha("chain.txt",ios::out || ios::app);
+	ofstream scriviCha("chain.txt",ios::out | ios::app);
 	ifstream leggicha("chain.txt", ios::in);
 	
 	if ((scriviBlo.is_open()) && (scriviCha.is_open()))
