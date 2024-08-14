@@ -69,6 +69,9 @@ void DatiTransazione::generaCodUnivoco()
 		this->codCarta +
 		/*this-> +codMacchina*/
 		"!";
+
+	setCode(this->codiceUnivocoTransazione);
+	
 }
 
 string DatiTransazione::getCodiceUnivoco()

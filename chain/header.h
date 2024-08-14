@@ -8,7 +8,8 @@
 
 using namespace std;
 
-class Transazione {
+class Transazione 
+{
 	private:
 		string transCode; 
 		
@@ -17,11 +18,11 @@ class Transazione {
 		Transazione();
 		Transazione(string code);
 		string getCode();
-		void setCode();
+		void setCode(string code);
 
 };
 
-class DatiTransazione
+class DatiTransazione : protected Transazione
 {
 private:
 	string data;
@@ -42,7 +43,7 @@ public:
 	string getCodiceUnivoco();
 };
 
-class Blocco {
+class Blocco : protected Transazione {
 private:
 	int idChain;
 	int idBlocco;
@@ -79,7 +80,7 @@ public:
 
 
 
-class GestFile
+class GestFile : protected Blocco, protected Chain
 {
 	private:
 		string appoggio;

@@ -9,7 +9,7 @@ int main()
 {
 	string codCarta = "00000001";
 	string codUte = "00000001";
-	double importo = 157.26;
+	double importo = 157.2;
 	string appoggio;
 
 	DatiTransazione dt(importo, codUte, codCarta);
@@ -18,6 +18,7 @@ int main()
 	GestFile g;
 	
 	appoggio = dt.getCodiceUnivoco();
+	dt.
 	cout << appoggio;
 	
 	Transazione transact(appoggio);

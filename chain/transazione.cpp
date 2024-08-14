@@ -20,7 +20,7 @@ string Transazione::getCode()
 	return this->transCode;
 }
 
-void Transazione::setCode()
+void Transazione::setCode(string code)
 {
-
+	this->transCode = code;
 }
